@@ -1,4 +1,4 @@
-<p>
+<p [ngClass]="{ updated: name !== 'Max' }">
   {{name}}
 </p>
 <p *ngIf="name !== 'Max'">Name updated!</p>
