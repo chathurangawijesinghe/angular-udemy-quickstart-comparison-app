@@ -1,14 +1,1 @@
-<app-username [username]="'Chris'" (userClicked)="onUserWasClicked($event)"></app-username>
-<app-username [username]="'Anna'" (userClicked)="onUserWasClicked($event)"></app-username>
-<p [ngClass]="{ updated: name !== 'Max' }">
-  {{name}}
-</p>
-<p *ngIf="name !== 'Max'">Name updated!</p>
-<button (click)="onChangeName()">Change Name</button>
-<button (click)="onAddElement()">New Element</button>
-<ul>
-  <li *ngFor="let element of elements" [id]="'element' + element" [ngStyle]="{ backgroundColor: getColor(element) }">
-    Element {{element}}</li>
-</ul>
-<input type="text" [(ngModel)]="message" />
-<p>{{message}}</p>
+<app-user></app-user>
