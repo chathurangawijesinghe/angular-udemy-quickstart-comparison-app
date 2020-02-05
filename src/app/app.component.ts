@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-udemy-quickstart-comparison-app';
+  name = 'Max';
+  elements: number[] = [];
+
+  onChangeName() {
+    this.name = 'Anna';
+  }
+
+  onAddElement() {
+    this.elements.push(this.elements.length + 1);
+  }
 }
