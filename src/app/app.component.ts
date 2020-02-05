@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { applySourceSpanToExpressionIfNeeded } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +8,7 @@ import { applySourceSpanToExpressionIfNeeded } from '@angular/compiler/src/outpu
 export class AppComponent {
   name = 'Max';
   elements: number[] = [];
+  message: string;
 
   onChangeName() {
     this.name = 'Anna';
@@ -22,7 +22,7 @@ export class AppComponent {
     return element % 2 === 0 ? 'green' : 'red';
   }
 
-  onUserWasClicked(username: string){
+  onUserWasClicked(username: string) {
     alert(username);
   }
 }
