@@ -5,8 +5,6 @@
 <button (click)="onChangeName()">Change Name</button>
 <button (click)="onAddElement()">New Element</button>
 <ul>
-  <li
-    *ngFor="let element of elements"
-    [id]="'element' + element"
-  >Element {{element}}</li>
+  <li *ngFor="let element of elements" [id]="'element' + element" [ngStyle]="{ backgroundColor: getColor(element) }">
+    Element {{element}}</li>
 </ul>
